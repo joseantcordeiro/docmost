@@ -25,11 +25,11 @@ export const queryClient = new QueryClient({
   },
 });
 
-loadCatalog("pt");
-
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement,
 );
+
+const promise = loadCatalog("pt");
 
 root.render(
   <BrowserRouter>
@@ -45,5 +45,5 @@ root.render(
         </ModalsProvider>
       </MantineProvider>
     </I18nProvider>
-  </BrowserRouter>,
+  </BrowserRouter>
 );
