@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet-async";
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import {getAppName} from "@/lib/config.ts";
+import { Trans } from "@lingui/macro";
 
 export default function SetupWorkspace() {
   const {
@@ -33,7 +34,7 @@ export default function SetupWorkspace() {
     return (
       <>
         <Helmet>
-          <title>Setup Workspace - {getAppName()}</title>
+          <title><Trans>Setup Workspace - {getAppName()}</Trans></title>
         </Helmet>
         <SetupWorkspaceForm />
       </>

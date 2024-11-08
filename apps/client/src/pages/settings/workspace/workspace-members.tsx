@@ -8,6 +8,7 @@ import WorkspaceInvitesTable from "@/features/workspace/components/members/compo
 import useUserRole from "@/hooks/use-user-role.tsx";
 import {getAppName} from "@/lib/config.ts";
 import {Helmet} from "react-helmet-async";
+import { Trans } from "@lingui/macro";
 
 export default function WorkspaceMembers() {
     const [segmentValue, setSegmentValue] = useState("members");
@@ -34,7 +35,7 @@ export default function WorkspaceMembers() {
     return (
         <>
             <Helmet>
-                <title>Members - {getAppName()}</title>
+                <title><Trans>Members - {getAppName()}</Trans></title>
             </Helmet>
             <SettingsTitle title="Members"/>
 

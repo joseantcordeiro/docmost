@@ -16,6 +16,7 @@ import classes from "./auth.module.css";
 import { useRedirectIfAuthenticated } from "@/features/auth/hooks/use-redirect-if-authenticated.ts";
 import { Link, useNavigate } from "react-router-dom";
 import APP_ROUTE from "@/lib/app-route.ts";
+import { Trans } from "@lingui/macro";
 
 const formSchema = z.object({
   email: z
@@ -67,7 +68,7 @@ export function LoginForm() {
           />
 
           <Button type="submit" fullWidth mt="xl" loading={isLoading}>
-            Sign In
+            <Trans>Sign In</Trans>
           </Button>
         </form>
 
@@ -77,7 +78,7 @@ export function LoginForm() {
           underline="never"
           size="sm"
         >
-          Forgot your password?
+          <Trans>Forgot your password?</Trans>
         </Anchor>
       </Box>
     </Container>

@@ -13,6 +13,7 @@ import {
 import { ISetupWorkspace } from "@/features/auth/types/auth.types";
 import useAuth from "@/features/auth/hooks/use-auth";
 import classes from "@/features/auth/components/auth.module.css";
+import { Trans } from "@lingui/macro";
 
 const formSchema = z.object({
   workspaceName: z.string().trim().min(3).max(50),
@@ -46,7 +47,7 @@ export function SetupWorkspaceForm() {
     <Container size={420} my={40} className={classes.container}>
       <Box p="xl" mt={200}>
         <Title order={2} ta="center" fw={500} mb="md">
-          Create workspace
+          <Trans>Create workspace</Trans>
         </Title>
 
         <form onSubmit={form.onSubmit(onSubmit)}>
@@ -88,7 +89,7 @@ export function SetupWorkspaceForm() {
             {...form.getInputProps("password")}
           />
           <Button type="submit" fullWidth mt="xl" loading={isLoading}>
-            Setup workspace
+            <Trans>Setup workspace</Trans>
           </Button>
         </form>
       </Box>

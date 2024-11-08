@@ -12,6 +12,7 @@ import {
 } from "@mantine/core";
 import classes from "./auth.module.css";
 import { useRedirectIfAuthenticated } from "@/features/auth/hooks/use-redirect-if-authenticated.ts";
+import { Trans } from "@lingui/macro";
 
 const formSchema = z.object({
   newPassword: z
@@ -45,7 +46,7 @@ export function PasswordResetForm({ resetToken }: PasswordResetFormProps) {
     <Container size={420} my={40} className={classes.container}>
       <Box p="xl" mt={200}>
         <Title order={2} ta="center" fw={500} mb="md">
-          Password reset
+          <Trans>Password reset</Trans>
         </Title>
 
         <form onSubmit={form.onSubmit(onSubmit)}>
@@ -58,7 +59,7 @@ export function PasswordResetForm({ resetToken }: PasswordResetFormProps) {
           />
 
           <Button type="submit" fullWidth mt="xl" loading={isLoading}>
-            Set password
+            <Trans>Set password</Trans>
           </Button>
         </form>
       </Box>

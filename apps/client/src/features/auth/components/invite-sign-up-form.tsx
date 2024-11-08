@@ -1,5 +1,6 @@
 import * as React from "react";
 import * as z from "zod";
+import { Trans } from "@lingui/macro";
 
 import { useForm, zodResolver } from "@mantine/form";
 import {
@@ -55,7 +56,7 @@ export function InviteSignUpForm() {
   }
 
   if (isError) {
-    return <div>invalid invitation link</div>;
+    return <div><Trans>invalid invitation link</Trans></div>;
   }
 
   if (!invitation) {
@@ -66,7 +67,7 @@ export function InviteSignUpForm() {
     <Container size={420} my={40} className={classes.container}>
       <Box p="xl" mt={200}>
         <Title order={2} ta="center" fw={500} mb="md">
-          Join the workspace
+          <Trans>Join the workspace</Trans>
         </Title>
 
         <Stack align="stretch" justify="center" gap="xl">
@@ -98,7 +99,7 @@ export function InviteSignUpForm() {
               {...form.getInputProps("password")}
             />
             <Button type="submit" fullWidth mt="xl" loading={isLoading}>
-              Sign Up
+              <Trans>Sign Up</Trans>
             </Button>
           </form>
         </Stack>

@@ -1,5 +1,6 @@
 import { defineConfig, loadEnv } from "vite";
 import react from "@vitejs/plugin-react";
+import { lingui } from "@lingui/vite-plugin";
 import * as path from "path";
 
 export const envPath = path.resolve(process.cwd(), "..", "..");
@@ -15,7 +16,14 @@ export default defineConfig(({ mode }) => {
       },
       'APP_VERSION': JSON.stringify(process.env.npm_package_version),
     },
-    plugins: [react()],
+    plugins: [
+      react({
+        babel: {
+          plugins: ["macros"],
+        },
+      }),
+      lingui(),
+    ],
     resolve: {
       alias: {
         "@": "/src",

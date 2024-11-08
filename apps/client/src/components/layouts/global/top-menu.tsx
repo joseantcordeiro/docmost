@@ -13,6 +13,7 @@ import { Link } from "react-router-dom";
 import APP_ROUTE from "@/lib/app-route.ts";
 import useAuth from "@/features/auth/hooks/use-auth.ts";
 import { CustomAvatar } from "@/components/ui/custom-avatar.tsx";
+import { Trans } from "@lingui/macro";
 
 export default function TopMenu() {
   const [currentUser] = useAtom(currentUserAtom);
@@ -44,14 +45,14 @@ export default function TopMenu() {
         </UnstyledButton>
       </Menu.Target>
       <Menu.Dropdown>
-        <Menu.Label>Workspace</Menu.Label>
+        <Menu.Label><Trans>Workspace</Trans></Menu.Label>
 
         <Menu.Item
           component={Link}
           to={APP_ROUTE.SETTINGS.WORKSPACE.GENERAL}
           leftSection={<IconSettings size={16} />}
         >
-          Workspace settings
+          <Trans>Workspace settings</Trans>
         </Menu.Item>
 
         <Menu.Item
@@ -59,12 +60,12 @@ export default function TopMenu() {
           to={APP_ROUTE.SETTINGS.WORKSPACE.MEMBERS}
           leftSection={<IconUsers size={16} />}
         >
-          Manage members
+          <Trans>Manage members</Trans>
         </Menu.Item>
 
         <Menu.Divider />
 
-        <Menu.Label>Account</Menu.Label>
+        <Menu.Label><Trans>Account</Trans></Menu.Label>
         <Menu.Item component={Link} to={APP_ROUTE.SETTINGS.ACCOUNT.PROFILE}>
           <Group wrap={"nowrap"}>
             <CustomAvatar
@@ -88,7 +89,7 @@ export default function TopMenu() {
           to={APP_ROUTE.SETTINGS.ACCOUNT.PROFILE}
           leftSection={<IconUserCircle size={16} />}
         >
-          My profile
+          <Trans>My profile</Trans>
         </Menu.Item>
 
         <Menu.Item
@@ -96,13 +97,13 @@ export default function TopMenu() {
           to={APP_ROUTE.SETTINGS.ACCOUNT.PREFERENCES}
           leftSection={<IconBrush size={16} />}
         >
-          My preferences
+          <Trans>My preferences</Trans>
         </Menu.Item>
 
         <Menu.Divider />
 
         <Menu.Item onClick={logout} leftSection={<IconLogout size={16} />}>
-          Logout
+          <Trans>Logout</Trans>
         </Menu.Item>
       </Menu.Dropdown>
     </Menu>

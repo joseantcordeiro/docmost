@@ -5,6 +5,7 @@ import {Group} from "@mantine/core";
 import CreateSpaceModal from "@/features/space/components/create-space-modal.tsx";
 import {getAppName} from "@/lib/config.ts";
 import {Helmet} from "react-helmet-async";
+import { Trans } from "@lingui/macro";
 
 export default function Spaces() {
     const {isAdmin} = useUserRole();
@@ -12,7 +13,7 @@ export default function Spaces() {
     return (
         <>
             <Helmet>
-                <title>Spaces - {getAppName()}</title>
+                <title><Trans>Spaces - {getAppName()}</Trans></title>
             </Helmet>
             <SettingsTitle title="Spaces"/>
 

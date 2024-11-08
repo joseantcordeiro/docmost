@@ -6,7 +6,9 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint  --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "messages:extract": "lingui extract",
+    "messages:compile": "lingui compile"
   },
   "dependencies": {
     "@casl/ability": "^6.7.1",
@@ -15,6 +17,8 @@
     "@emoji-mart/data": "^1.2.1",
     "@emoji-mart/react": "^1.1.1",
     "@excalidraw/excalidraw": "^0.17.6",
+    "@lingui/macro": "^4.14.0",
+    "@lingui/react": "^4.14.0",
     "@mantine/core": "^7.12.2",
     "@mantine/form": "^7.12.2",
     "@mantine/hooks": "^7.12.2",
@@ -49,6 +53,8 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
+    "@lingui/cli": "^4.14.0",
+    "@lingui/vite-plugin": "^4.14.0",
     "@tanstack/eslint-plugin-query": "^5.53.0",
     "@types/file-saver": "^2.0.7",
     "@types/js-cookie": "^3.0.6",
@@ -59,6 +65,7 @@
     "@typescript-eslint/eslint-plugin": "^8.3.0",
     "@typescript-eslint/parser": "^8.3.0",
     "@vitejs/plugin-react": "^4.3.1",
+    "babel-plugin-macros": "^3.1.0",
     "eslint": "^9.9.1",
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-react-refresh": "^0.4.11",

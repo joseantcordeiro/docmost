@@ -5,6 +5,7 @@ import { useVerifyUserTokenQuery } from "@/features/auth/queries/auth-query";
 import { Button, Container, Group, Text } from "@mantine/core";
 import APP_ROUTE from "@/lib/app-route";
 import {getAppName} from "@/lib/config.ts";
+import { Trans } from "@lingui/macro";
 
 export default function PasswordReset() {
   const [searchParams] = useSearchParams();
@@ -22,7 +23,7 @@ export default function PasswordReset() {
     return (
       <>
         <Helmet>
-          <title>Password Reset - {getAppName()}</title>
+          <title><Trans>Password Reset - {getAppName()}</Trans></title>
         </Helmet>
         <Container my={40}>
           <Text size="lg" ta="center">
@@ -35,7 +36,7 @@ export default function PasswordReset() {
               variant="subtle"
               size="md"
             >
-              Goto login page
+                <Trans>Goto login page</Trans>
             </Button>
           </Group>
         </Container>
@@ -46,7 +47,7 @@ export default function PasswordReset() {
   return (
     <>
       <Helmet>
-        <title>Password Reset - {getAppName()}</title>
+        <title><Trans>Password Reset - {getAppName()}</Trans></title>
       </Helmet>
       <PasswordResetForm resetToken={resetToken} />
     </>

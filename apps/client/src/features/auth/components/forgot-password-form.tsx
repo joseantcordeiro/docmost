@@ -6,6 +6,7 @@ import { IForgotPassword } from "@/features/auth/types/auth.types";
 import { Box, Button, Container, Text, TextInput, Title } from "@mantine/core";
 import classes from "./auth.module.css";
 import { useRedirectIfAuthenticated } from "@/features/auth/hooks/use-redirect-if-authenticated.ts";
+import { Trans } from "@lingui/macro";
 
 const formSchema = z.object({
   email: z
@@ -36,7 +37,7 @@ export function ForgotPasswordForm() {
     <Container size={420} my={40} className={classes.container}>
       <Box p="xl" mt={200}>
         <Title order={2} ta="center" fw={500} mb="md">
-          Forgot password
+          <Trans>Forgot password</Trans>
         </Title>
 
         <form onSubmit={form.onSubmit(onSubmit)}>
@@ -53,14 +54,16 @@ export function ForgotPasswordForm() {
 
           {isTokenSent && (
             <Text>
-              A password reset link has been sent to your email. Please check
-              your inbox.
+              <Trans>
+                A password reset link has been sent to your email. Please check
+                your inbox.
+              </Trans>
             </Text>
           )}
 
           {!isTokenSent && (
             <Button type="submit" fullWidth mt="xl" loading={isLoading}>
-              Send reset link
+              <Trans>Send reset link</Trans>
             </Button>
           )}
         </form>

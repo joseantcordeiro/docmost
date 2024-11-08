@@ -5,6 +5,7 @@ import CreateGroupModal from "@/features/group/components/create-group-modal";
 import useUserRole from "@/hooks/use-user-role.tsx";
 import {getAppName} from "@/lib/config.ts";
 import {Helmet} from "react-helmet-async";
+import { Trans } from "@lingui/macro";
 
 export default function Groups() {
   const { isAdmin } = useUserRole();
@@ -12,7 +13,7 @@ export default function Groups() {
   return (
     <>
         <Helmet>
-            <title>Groups - {getAppName()}</title>
+            <title><Trans>Groups - {getAppName()}</Trans></title>
         </Helmet>
       <SettingsTitle title="Groups" />
 
