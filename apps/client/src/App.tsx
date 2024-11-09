@@ -27,9 +27,17 @@ import InviteSignup from "@/pages/auth/invite-signup.tsx";
 import ForgotPassword from "@/pages/auth/forgot-password.tsx";
 import PasswordReset from "./pages/auth/password-reset";
 
+import { I18nProvider } from "@lingui/react";
+import { i18n } from "@lingui/core";
+import { defaultLocale, dynamicActivate } from "./lib/i18n.ts";
+
 export default function App() {
   const [, setSocket] = useAtom(socketAtom);
   const authToken = useAtomValue(authTokensAtom);
+
+  useEffect(() => {
+    const promise = dynamicActivate(defaultLocale);
+  }, []);
 
   useEffect(() => {
     if (!authToken?.accessToken) {
@@ -59,48 +67,48 @@ export default function App() {
   useTreeSocket();
 
   return (
-    <>
-      <Routes>
-        <Route index element={<Navigate to="/home" />} />
-        <Route path={"/login"} element={<LoginPage />} />
-        <Route path={"/invites/:invitationId"} element={<InviteSignup />} />
-        <Route path={"/setup/register"} element={<SetupWorkspace />} />
-        <Route path={"/forgot-password"} element={<ForgotPassword />} />
-        <Route path={"/password-reset"} element={<PasswordReset />} />
+      <I18nProvider i18n={i18n}>
+        <Routes>
+          <Route index element={<Navigate to="/home" />} />
+          <Route path={"/login"} element={<LoginPage />} />
+          <Route path={"/invites/:invitationId"} element={<InviteSignup />} />
+          <Route path={"/setup/register"} element={<SetupWorkspace />} />
+          <Route path={"/forgot-password"} element={<ForgotPassword />} />
+          <Route path={"/password-reset"} element={<PasswordReset />} />
 
-        <Route path={"/p/:pageSlug"} element={<PageRedirect />} />
+          <Route path={"/p/:pageSlug"} element={<PageRedirect />} />
 
-        <Route element={<Layout />}>
-          <Route path={"/home"} element={<Home />} />
+          <Route element={<Layout />}>
+            <Route path={"/home"} element={<Home />} />
 
-          <Route path={"/s/:spaceSlug"} element={<SpaceHome />} />
-          <Route
-            path={"/s/:spaceSlug/p/:pageSlug"}
-            element={
-              <ErrorBoundary
-                fallback={<>Failed to load page. An error occurred.</>}
-              >
-                <Page />
-              </ErrorBoundary>
-            }
-          />
-
-          <Route path={"/settings"}>
-            <Route path={"account/profile"} element={<AccountSettings />} />
+            <Route path={"/s/:spaceSlug"} element={<SpaceHome />} />
             <Route
-              path={"account/preferences"}
-              element={<AccountPreferences />}
+                path={"/s/:spaceSlug/p/:pageSlug"}
+                element={
+                  <ErrorBoundary
+                      fallback={<>Failed to load page. An error occurred.</>}
+                  >
+                    <Page />
+                  </ErrorBoundary>
+                }
             />
-            <Route path={"workspace"} element={<WorkspaceSettings />} />
-            <Route path={"members"} element={<WorkspaceMembers />} />
-            <Route path={"groups"} element={<Groups />} />
-            <Route path={"groups/:groupId"} element={<GroupInfo />} />
-            <Route path={"spaces"} element={<Spaces />} />
-          </Route>
-        </Route>
 
-        <Route path="*" element={<Error404 />} />
-      </Routes>
-    </>
+            <Route path={"/settings"}>
+              <Route path={"account/profile"} element={<AccountSettings />} />
+              <Route
+                  path={"account/preferences"}
+                  element={<AccountPreferences />}
+              />
+              <Route path={"workspace"} element={<WorkspaceSettings />} />
+              <Route path={"members"} element={<WorkspaceMembers />} />
+              <Route path={"groups"} element={<Groups />} />
+              <Route path={"groups/:groupId"} element={<GroupInfo />} />
+              <Route path={"spaces"} element={<Spaces />} />
+            </Route>
+          </Route>
+
+          <Route path="*" element={<Error404 />} />
+        </Routes>
+      </I18nProvider>
   );
 }

@@ -45,14 +45,14 @@ export default function TopMenu() {
         </UnstyledButton>
       </Menu.Target>
       <Menu.Dropdown>
-        <Menu.Label><Trans>Workspace</Trans></Menu.Label>
+        <Menu.Label><Trans id="top.menu.workspace">Workspace</Trans></Menu.Label>
 
         <Menu.Item
           component={Link}
           to={APP_ROUTE.SETTINGS.WORKSPACE.GENERAL}
           leftSection={<IconSettings size={16} />}
         >
-          <Trans>Workspace settings</Trans>
+          <Trans id="top.menu.workspace.settings">Workspace settings</Trans>
         </Menu.Item>
 
         <Menu.Item
@@ -60,12 +60,12 @@ export default function TopMenu() {
           to={APP_ROUTE.SETTINGS.WORKSPACE.MEMBERS}
           leftSection={<IconUsers size={16} />}
         >
-          <Trans>Manage members</Trans>
+          <Trans id="top.menu.manage.members">Manage members</Trans>
         </Menu.Item>
 
         <Menu.Divider />
 
-        <Menu.Label><Trans>Account</Trans></Menu.Label>
+        <Menu.Label><Trans id="top.menu.account">Account</Trans></Menu.Label>
         <Menu.Item component={Link} to={APP_ROUTE.SETTINGS.ACCOUNT.PROFILE}>
           <Group wrap={"nowrap"}>
             <CustomAvatar
@@ -89,7 +89,7 @@ export default function TopMenu() {
           to={APP_ROUTE.SETTINGS.ACCOUNT.PROFILE}
           leftSection={<IconUserCircle size={16} />}
         >
-          <Trans>My profile</Trans>
+          <Trans id="top.menu.profile">My profile</Trans>
         </Menu.Item>
 
         <Menu.Item
@@ -97,13 +97,13 @@ export default function TopMenu() {
           to={APP_ROUTE.SETTINGS.ACCOUNT.PREFERENCES}
           leftSection={<IconBrush size={16} />}
         >
-          <Trans>My preferences</Trans>
+          <Trans id="top.menu.preferences">My preferences</Trans>
         </Menu.Item>
 
         <Menu.Divider />
 
         <Menu.Item onClick={logout} leftSection={<IconLogout size={16} />}>
-          <Trans>Logout</Trans>
+          <Trans id="top.menu.logout">Logout</Trans>
         </Menu.Item>
       </Menu.Dropdown>
     </Menu>

@@ -13,7 +13,7 @@ import {formattedDate} from '@/lib/time.ts';
 import {useRecentChangesQuery} from '@/features/page/queries/page-query.ts';
 import {IconFileDescription} from '@tabler/icons-react';
 import {getSpaceUrl} from '@/lib/config.ts';
-import { Trans } from "@lingui/macro";
+import { t, Trans } from "@lingui/macro";
 
 interface Props {
   spaceId?: string;
@@ -27,7 +27,7 @@ export default function RecentChanges({spaceId}: Props) {
   }
 
   if (isError) {
-    return <Text>Failed to fetch recent pages</Text>;
+    return <Text><Trans id="recent.changes.error">Failed to fetch recent pages</Trans></Text>;
   }
 
   return pages && pages.items.length > 0 ? (
@@ -79,7 +79,7 @@ export default function RecentChanges({spaceId}: Props) {
     </Table.ScrollContainer>
   ) : (
     <Text size="md" ta="center">
-      <Trans>No pages yet</Trans>
+      <Trans id="recent.changes.no_pages">No pages yet</Trans>
     </Text>
   );
 }

@@ -1,0 +1,419 @@
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2024-11-09 09:30+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: @lingui/cli\n"
+"Language: pt_PT\n"
+
+#. js-lingui-explicit-id
+#: src/components/ui/error-404.tsx:14
+msgid "error.404.container.title"
+msgstr "404 Página não encontrada"
+
+#. js-lingui-explicit-id
+#: src/components/ui/error-404.tsx:11
+msgid "error.404.title"
+msgstr "404 Página não encontrada - Docmost"
+
+#. js-lingui-explicit-id
+#: src/features/auth/components/forgot-password-form.tsx:57
+msgid "forgot.password.form.sent"
+msgstr "Um link de redefinição de palavra-passe foi enviado para o seu e-mail. Por favor, verifique a sua caixa de entrada."
+
+#. js-lingui-explicit-id
+#: src/components/layouts/global/top-menu.tsx:68
+msgid "top.menu.account"
+msgstr "Conta"
+
+#. js-lingui-explicit-id
+#: src/components/theme-toggle.tsx:11
+msgid "theme.toggle.auto"
+msgstr "Auto"
+
+#. js-lingui-explicit-id
+#: src/features/auth/components/setup-workspace-form.tsx:50
+msgid "setup.workspace.form.title"
+msgstr "Criar espaço de trabalho"
+
+#. js-lingui-explicit-id
+#: src/components/theme-toggle.tsx:10
+msgid "theme.toggle.dark"
+msgstr "Escuro"
+
+#. js-lingui-explicit-id
+#: src/features/auth/components/setup-workspace-form.tsx:58
+msgid "setup.workspace.form.placeholder.workspace.name"
+msgstr "p.ex. ACME, Lda"
+
+#. js-lingui-explicit-id
+#: src/features/auth/components/forgot-password-form.tsx:48
+msgid "forgot.password.form.label"
+msgstr "Email"
+
+#. js-lingui-explicit-id
+#: src/features/auth/components/invite-sign-up-form.tsx:87
+msgid "invite.signup.form.label.email"
+msgstr "Email"
+
+#. js-lingui-explicit-id
+#: src/features/auth/components/login-form.tsx:56
+msgid "login.form.label.email"
+msgstr "Email"
+
+#. js-lingui-explicit-id
+#: src/features/auth/components/login-form.tsx:24
+msgid "login.form.email.required"
+msgstr "O email é obrigatório"
+
+#. js-lingui-explicit-id
+#: src/features/auth/components/setup-workspace-form.tsx:23
+msgid "setup.workspace.form.email.required"
+msgstr "O email é obrigatório"
+
+#. js-lingui-explicit-id
+#: src/features/auth/components/forgot-password-form.tsx:14
+msgid "forgot.password.form.required"
+msgstr "O email é obrigatório"
+
+#. js-lingui-explicit-id
+#: src/features/auth/components/setup-workspace-form.tsx:86
+msgid "setup.workspace.form.placeholder.password"
+msgstr "Introduza uma senha forte"
+
+#. js-lingui-explicit-id
+#: src/features/auth/components/invite-sign-up-form.tsx:79
+msgid "invite.signup.form.placeholder.name"
+msgstr "introduza o seu nome completo"
+
+#. js-lingui-explicit-id
+#: src/features/auth/components/setup-workspace-form.tsx:68
+msgid "setup.workspace.form.placeholder.name"
+msgstr "introduza o seu nome completo"
+
+#. js-lingui-explicit-id
+#: src/pages/page/page.tsx:35
+msgid "page.error"
+msgstr "Erro ao carregar dados da página."
+
+#. js-lingui-explicit-id
+#: src/components/common/recent-changes.tsx:30
+msgid "recent.changes.error"
+msgstr "Falha ao carregar páginas recentes"
+
+#. js-lingui-explicit-id
+#: src/features/auth/components/forgot-password-form.tsx:40
+msgid "forgot.password.form.title"
+msgstr "Esqueceu-se da sua senha"
+
+#. js-lingui-explicit-id
+#: src/pages/auth/forgot-password.tsx:10
+msgid "forgot.password.title"
+msgstr "Esqueceu-se da sua senha"
+
+#. js-lingui-explicit-id
+#: src/features/auth/components/login-form.tsx:81
+msgid "login.form.anchor"
+msgstr "Esqueceu-se da sua senha?"
+
+#. js-lingui-explicit-id
+#: src/pages/settings/workspace/workspace-settings.tsx:13
+msgid "workspace.settings.general"
+msgstr "General"
+
+#. js-lingui-explicit-id
+#: src/pages/auth/password-reset.tsx:39
+msgid "password.reset.goto"
+msgstr "Ir para a página de entrar"
+
+#. js-lingui-explicit-id
+#: src/pages/settings/group/groups.tsx:18
+msgid "groups.groups"
+msgstr "Grupos"
+
+#. js-lingui-explicit-id
+#: src/pages/settings/group/groups.tsx:16
+msgid "groups.title"
+msgstr "Grupos"
+
+#. js-lingui-explicit-id
+#: src/pages/dashboard/home.tsx:12
+msgid "home.title"
+msgstr "Início"
+
+#. js-lingui-explicit-id
+#: src/features/auth/components/forgot-password-form.tsx:15
+msgid "forgot.password.form.invalid"
+msgstr "Endereço de email inválido"
+
+#. js-lingui-explicit-id
+#: src/features/auth/components/login-form.tsx:25
+msgid "login.form.email.invalid"
+msgstr "Endereço de email inválido"
+
+#. js-lingui-explicit-id
+#: src/features/auth/components/setup-workspace-form.tsx:24
+msgid "setup.workspace.form.email.invalid"
+msgstr "Endereço de email inválido"
+
+#. js-lingui-explicit-id
+#: src/features/auth/components/invite-sign-up-form.tsx:59
+msgid "invite.signup.form.error"
+msgstr "link de convite inválido"
+
+#. js-lingui-explicit-id
+#: src/pages/auth/password-reset.tsx:30
+msgid "password.reset.invalid"
+msgstr "Link de redefinição de senha inválido ou expirado"
+
+#. js-lingui-explicit-id
+#: src/pages/auth/invite-signup.tsx:10
+msgid "invite.signup.title"
+msgstr "Inscrição de convite"
+
+#. js-lingui-explicit-id
+#: src/features/auth/components/invite-sign-up-form.tsx:70
+msgid "invite.signup.form.title"
+msgstr "Junte-se ao espaço de trabalho"
+
+#. js-lingui-explicit-id
+#: src/components/theme-toggle.tsx:9
+msgid "theme.toggle.light"
+msgstr "Claro"
+
+#. js-lingui-explicit-id
+#: src/features/auth/components/login-form.tsx:49
+msgid "login.form.title"
+msgstr "Conecte-se"
+
+#. js-lingui-explicit-id
+#: src/pages/auth/login.tsx:10
+msgid "login.title"
+msgstr "Conecte-se"
+
+#. js-lingui-explicit-id
+#: src/components/layouts/global/top-menu.tsx:106
+msgid "top.menu.logout"
+msgstr "Sair"
+
+#. js-lingui-explicit-id
+#: src/pages/settings/group/group-info.tsx:14
+msgid "group.info.manage_group"
+msgstr "Gerir grupo"
+
+#. js-lingui-explicit-id
+#: src/pages/settings/group/group-info.tsx:12
+msgid "group.info.title"
+msgstr "Gerir grupo"
+
+#. js-lingui-explicit-id
+#: src/components/layouts/global/top-menu.tsx:63
+msgid "top.menu.manage.members"
+msgstr "Gerir membros"
+
+#. js-lingui-explicit-id
+#: src/pages/settings/workspace/workspace-members.tsx:40
+msgid "workspace.members.members"
+msgstr "Membros"
+
+#. js-lingui-explicit-id
+#: src/pages/settings/workspace/workspace-members.tsx:50
+msgid "workspace.members.label.members"
+msgstr "Membros"
+
+#. js-lingui-explicit-id
+#: src/pages/settings/workspace/workspace-members.tsx:38
+msgid "workspace.members.title"
+msgstr "Membros"
+
+#. js-lingui-explicit-id
+#: src/components/layouts/global/top-menu.tsx:100
+msgid "top.menu.preferences"
+msgstr "As minhas preferências"
+
+#. js-lingui-explicit-id
+#: src/components/layouts/global/top-menu.tsx:92
+msgid "top.menu.profile"
+msgstr "O meu perfil"
+
+#. js-lingui-explicit-id
+#: src/pages/settings/account/account-settings.tsx:17
+msgid "account.settings.my_profile"
+msgstr "O meu perfil"
+
+#. js-lingui-explicit-id
+#: src/pages/settings/account/account-settings.tsx:15
+msgid "account.settings.title"
+msgstr "O meu perfil"
+
+#. js-lingui-explicit-id
+#: src/features/auth/components/invite-sign-up-form.tsx:78
+msgid "invite.signup.form.label.name"
+msgstr "Nome"
+
+#. js-lingui-explicit-id
+#: src/features/auth/components/password-reset-form.tsx:54
+msgid "password.reset.form.label"
+msgstr "Nova Senha"
+
+#. js-lingui-explicit-id
+#: src/components/common/recent-changes.tsx:82
+msgid "recent.changes.no_pages"
+msgstr "Ainda não há páginas"
+
+#. js-lingui-explicit-id
+#: src/pages/space/space-home.tsx:16
+msgid "space.home.overview"
+msgstr "Visão geral"
+
+#. js-lingui-explicit-id
+#: src/features/auth/components/invite-sign-up-form.tsx:95
+msgid "invite.signup.form.label.password"
+msgstr "Palavra-passe"
+
+#. js-lingui-explicit-id
+#: src/features/auth/components/login-form.tsx:63
+msgid "login.form.label.password"
+msgstr "Senha"
+
+#. js-lingui-explicit-id
+#: src/features/auth/components/setup-workspace-form.tsx:85
+msgid "setup.workspace.form.label.password"
+msgstr "Senha"
+
+#. js-lingui-explicit-id
+#: src/features/auth/components/login-form.tsx:26
+msgid "login.form.password.required"
+msgstr "A senha é obrigatória"
+
+#. js-lingui-explicit-id
+#: src/features/auth/components/password-reset-form.tsx:20
+msgid "password.reset.form.password.invalid"
+msgstr "A senha deve conter pelo menos 8 caracteres"
+
+#. js-lingui-explicit-id
+#: src/features/auth/components/password-reset-form.tsx:49
+msgid "password.reset.form.title"
+msgstr "Redefinição de senha"
+
+#. js-lingui-explicit-id
+#: src/pages/auth/password-reset.tsx:26
+#: src/pages/auth/password-reset.tsx:50
+msgid "password.reset.title"
+msgstr "Redefinição de senha"
+
+#. js-lingui-explicit-id
+#: src/pages/settings/workspace/workspace-members.tsx:51
+msgid "workspace.members.label.pending"
+msgstr "Pendente"
+
+#. js-lingui-explicit-id
+#: src/pages/settings/account/account-preferences.tsx:15
+msgid "account.preferences.preferences"
+msgstr "Preferências"
+
+#. js-lingui-explicit-id
+#: src/pages/settings/account/account-preferences.tsx:13
+msgid "account.preferences.title"
+msgstr "Preferências"
+
+#. js-lingui-explicit-id
+#: src/features/auth/components/forgot-password-form.tsx:66
+msgid "forgot.password.form.button"
+msgstr "Enviar link de redefinição"
+
+#. js-lingui-explicit-id
+#: src/features/auth/components/password-reset-form.tsx:62
+msgid "password.reset.form.button"
+msgstr "Definir senha"
+
+#. js-lingui-explicit-id
+#: src/features/auth/components/setup-workspace-form.tsx:92
+msgid "setup.workspace.form.button"
+msgstr "Configurar espaço de trabalho"
+
+#. js-lingui-explicit-id
+#: src/pages/auth/setup-workspace.tsx:37
+msgid "setup.workspace.title"
+msgstr "Configurar espaço de trabalho"
+
+#. js-lingui-explicit-id
+#: src/features/auth/components/login-form.tsx:71
+msgid "login.form.button"
+msgstr "Entrar"
+
+#. js-lingui-explicit-id
+#: src/features/auth/components/invite-sign-up-form.tsx:102
+msgid "invite.signup.form.button"
+msgstr "Inscrever-se"
+
+#. js-lingui-explicit-id
+#: src/components/ui/error-404.tsx:16
+msgid "error.404.error"
+msgstr "Lamentamos, mas não conseguimos encontrar a página que procura."
+
+#. js-lingui-explicit-id
+#: src/pages/settings/space/spaces.tsx:18
+msgid "spaces.spaces"
+msgstr "Espaços de trabalho"
+
+#. js-lingui-explicit-id
+#: src/pages/settings/space/spaces.tsx:16
+msgid "spaces.title"
+msgstr "Espaços de trabalho"
+
+#. js-lingui-explicit-id
+#: src/components/ui/error-404.tsx:20
+msgid "error.404.button"
+msgstr "Leve-me de volta à página inicial"
+
+#. js-lingui-explicit-id
+#: src/pages/page/page.tsx:46
+msgid "page.title"
+msgstr "sem título"
+
+#. js-lingui-explicit-id
+#: src/components/layouts/global/top-menu.tsx:48
+msgid "top.menu.workspace"
+msgstr "Espaço de trabalho"
+
+#. js-lingui-explicit-id
+#: src/features/auth/components/setup-workspace-form.tsx:57
+msgid "setup.workspace.form.label.workspace.name"
+msgstr "Nome do espaço de trabalho"
+
+#. js-lingui-explicit-id
+#: src/components/layouts/global/top-menu.tsx:55
+msgid "top.menu.workspace.settings"
+msgstr "Configurações do espaço de trabalho"
+
+#. js-lingui-explicit-id
+#: src/pages/settings/workspace/workspace-settings.tsx:11
+msgid "workspace.settings.title"
+msgstr "Definições do espaço de trabalho"
+
+#. js-lingui-explicit-id
+#: src/features/auth/components/setup-workspace-form.tsx:77
+msgid "setup.workspace.form.label.email"
+msgstr "O seu email"
+
+#. js-lingui-explicit-id
+#: src/features/auth/components/setup-workspace-form.tsx:67
+msgid "setup.workspace.form.label.name"
+msgstr "O seu nome"
+
+#. js-lingui-explicit-id
+#: src/features/auth/components/password-reset-form.tsx:55
+msgid "password.reset.form.placeholder"
+msgstr "A sua nova senha"
+
+#. js-lingui-explicit-id
+#: src/features/auth/components/invite-sign-up-form.tsx:96
+msgid "invite.signup.form.placeholder.password"
+msgstr "A sua senha"
+
+#. js-lingui-explicit-id
+#: src/features/auth/components/login-form.tsx:64
+msgid "login.form.placeholder.password"
+msgstr "A sua senha"

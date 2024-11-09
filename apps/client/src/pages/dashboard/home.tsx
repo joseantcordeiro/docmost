@@ -3,13 +3,13 @@ import HomeTabs from "@/features/home/components/home-tabs";
 import SpaceGrid from "@/features/space/components/space-grid.tsx";
 import {getAppName} from "@/lib/config.ts";
 import {Helmet} from "react-helmet-async";
-import { Trans } from "@lingui/macro";
+import { t } from "@lingui/macro";
 
 export default function Home() {
     return (
         <>
             <Helmet>
-                <title><Trans>Home - {getAppName()}</Trans></title>
+                <title>{t({id: "home.title", message: "Home"})} - {getAppName()}</title>
             </Helmet>
             <Container size={"800"} pt="xl">
                 <SpaceGrid/>

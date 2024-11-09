@@ -1,6 +1,6 @@
 import * as React from "react";
 import * as z from "zod";
-import { Trans } from "@lingui/macro";
+import { t, Trans } from "@lingui/macro";
 
 import { useForm, zodResolver } from "@mantine/form";
 import {
@@ -56,7 +56,7 @@ export function InviteSignUpForm() {
   }
 
   if (isError) {
-    return <div><Trans>invalid invitation link</Trans></div>;
+    return <div><Trans id="invite.signup.form.error">invalid invitation link</Trans></div>;
   }
 
   if (!invitation) {
@@ -67,7 +67,7 @@ export function InviteSignUpForm() {
     <Container size={420} my={40} className={classes.container}>
       <Box p="xl" mt={200}>
         <Title order={2} ta="center" fw={500} mb="md">
-          <Trans>Join the workspace</Trans>
+          <Trans id="invite.signup.form.title">Join the workspace</Trans>
         </Title>
 
         <Stack align="stretch" justify="center" gap="xl">
@@ -75,8 +75,8 @@ export function InviteSignUpForm() {
             <TextInput
               id="name"
               type="text"
-              label="Name"
-              placeholder="enter your full name"
+              label={t({id: "invite.signup.form.label.name", message: "Name"})}
+              placeholder={t({id: "invite.signup.form.placeholder.name", message: "enter your full name"})}
               variant="filled"
               {...form.getInputProps("name")}
             />
@@ -84,7 +84,7 @@ export function InviteSignUpForm() {
             <TextInput
               id="email"
               type="email"
-              label="Email"
+              label={t({id: "invite.signup.form.label.email", message: "Email"})}
               value={invitation.email}
               disabled
               variant="filled"
@@ -92,14 +92,14 @@ export function InviteSignUpForm() {
             />
 
             <PasswordInput
-              label="Password"
-              placeholder="Your password"
+              label={t({id: "invite.signup.form.label.password", message: "Password"})}
+              placeholder={t({id: "invite.signup.form.placeholder.password", message: "Your password"})}
               variant="filled"
               mt="md"
               {...form.getInputProps("password")}
             />
             <Button type="submit" fullWidth mt="xl" loading={isLoading}>
-              <Trans>Sign Up</Trans>
+              <Trans id="invite.signup.form.button">Sign Up</Trans>
             </Button>
           </form>
         </Stack>

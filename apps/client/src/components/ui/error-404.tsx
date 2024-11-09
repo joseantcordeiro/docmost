@@ -8,16 +8,16 @@ export function Error404() {
   return (
     <>
       <Helmet>
-          <title><Trans>404 page not found - Docmost</Trans></title>
+          <title><Trans id="error.404.title">404 page not found - Docmost</Trans></title>
       </Helmet>
       <Container className={classes.root}>
-        <Title className={classes.title}>404 Page Not Found</Title>
+          <Title className={classes.title}><Trans id="error.404.container.title">404 Page Not Found</Trans></Title>
         <Text c="dimmed" size="lg" ta="center" className={classes.description}>
-          <Trans>Sorry, we can't find the page you are looking for.</Trans>
+          <Trans id="error.404.error">Sorry, we can't find the page you are looking for.</Trans>
         </Text>
         <Group justify="center">
           <Button component={Link} to={"/home"} variant="subtle" size="md">
-              <Trans>Take me back to homepage</Trans>
+              <Trans id="error.404.button">Take me back to homepage</Trans>
           </Button>
         </Group>
       </Container>

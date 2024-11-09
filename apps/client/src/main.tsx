@@ -11,9 +11,6 @@ import { ModalsProvider } from "@mantine/modals";
 import { Notifications } from "@mantine/notifications";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { HelmetProvider } from "react-helmet-async";
-import { i18n } from "@lingui/core";
-import { I18nProvider } from "@lingui/react";
-import { loadCatalog } from "./i18n";
 
 export const queryClient = new QueryClient({
   defaultOptions: {
@@ -29,21 +26,17 @@ const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement,
 );
 
-const promise = loadCatalog("pt");
-
 root.render(
   <BrowserRouter>
-    <I18nProvider i18n={i18n}>
-      <MantineProvider theme={theme}>
-        <ModalsProvider>
-          <QueryClientProvider client={queryClient}>
-            <Notifications position="bottom-center" limit={3} />
-            <HelmetProvider>
-              <App />
-            </HelmetProvider>
-          </QueryClientProvider>
-        </ModalsProvider>
-      </MantineProvider>
-    </I18nProvider>
+    <MantineProvider theme={theme}>
+      <ModalsProvider>
+        <QueryClientProvider client={queryClient}>
+          <Notifications position="bottom-center" limit={3} />
+          <HelmetProvider>
+            <App />
+          </HelmetProvider>
+        </QueryClientProvider>
+      </ModalsProvider>
+    </MantineProvider>
   </BrowserRouter>
 );

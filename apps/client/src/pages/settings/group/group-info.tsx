@@ -3,15 +3,15 @@ import GroupMembersList from "@/features/group/components/group-members";
 import GroupDetails from "@/features/group/components/group-details";
 import {getAppName} from "@/lib/config.ts";
 import {Helmet} from "react-helmet-async";
-import { Trans } from "@lingui/macro";
+import { t } from "@lingui/macro";
 
 export default function GroupInfo() {
     return (
         <>
             <Helmet>
-                <title><Trans>Manage Group - {getAppName()}</Trans></title>
+                <title>{t({id: "group.info.title", message: "Manage Group"})} - {getAppName()}</title>
             </Helmet>
-            <SettingsTitle title="Manage Group"/>
+            <SettingsTitle title={t({id: "group.info.manage_group", message: "Manage Group"})}/>
             <GroupDetails/>
             <GroupMembersList/>
         </>

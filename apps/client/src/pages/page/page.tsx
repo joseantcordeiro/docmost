@@ -12,6 +12,7 @@ import {
   SpaceCaslAction,
   SpaceCaslSubject,
 } from "@/features/space/permissions/permissions.type.ts";
+import { t, Trans } from "@lingui/macro";
 
 export default function Page() {
   const { pageSlug } = useParams();
@@ -31,7 +32,7 @@ export default function Page() {
 
   if (isError || !page) {
     // TODO: fix this
-    return <div>Error fetching page data.</div>;
+      return <div><Trans id="page.error">Error fetching page data.</Trans></div>;
   }
 
   if (!space) {
@@ -42,7 +43,7 @@ export default function Page() {
     page && (
       <div>
         <Helmet>
-          <title>{`${page?.icon || ""}  ${page?.title || "untitled"}`}</title>
+          <title>{`${page?.icon || ""}  ${page?.title || t({id: "page.title", message: "untitled"})}`}</title>
         </Helmet>
 
         <PageHeader

@@ -4,15 +4,15 @@ import PageWidthPref from "@/features/user/components/page-width-pref.tsx";
 import {Divider} from "@mantine/core";
 import {getAppName} from "@/lib/config.ts";
 import {Helmet} from "react-helmet-async";
-import { Trans } from "@lingui/macro";
+import { t } from "@lingui/macro";
 
 export default function AccountPreferences() {
     return (
         <>
             <Helmet>
-                <title><Trans>Preferences - {getAppName()}</Trans></title>
+                <title>{t({id: "account.preferences.title", message: "Preferences"})} - {getAppName()}</title>
             </Helmet>
-            <SettingsTitle title="Preferences"/>
+            <SettingsTitle title={t({id: "account.preferences.preferences", message: "Preferences"})}/>
             <AccountTheme/>
             <Divider my={"md"}/>
             <PageWidthPref/>

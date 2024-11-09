@@ -6,13 +6,13 @@ import { IForgotPassword } from "@/features/auth/types/auth.types";
 import { Box, Button, Container, Text, TextInput, Title } from "@mantine/core";
 import classes from "./auth.module.css";
 import { useRedirectIfAuthenticated } from "@/features/auth/hooks/use-redirect-if-authenticated.ts";
-import { Trans } from "@lingui/macro";
+import {t, Trans} from "@lingui/macro";
 
 const formSchema = z.object({
   email: z
     .string()
-    .min(1, { message: "Email is required" })
-    .email({ message: "Invalid email address" }),
+    .min(1, { message: t({id: "forgot.password.form.required", message: "Email is required"}) })
+    .email({ message: t({id: "forgot.password.form.invalid", message: "Invalid email address"}) }),
 });
 
 export function ForgotPasswordForm() {
@@ -37,7 +37,7 @@ export function ForgotPasswordForm() {
     <Container size={420} my={40} className={classes.container}>
       <Box p="xl" mt={200}>
         <Title order={2} ta="center" fw={500} mb="md">
-          <Trans>Forgot password</Trans>
+          <Trans id="forgot.password.form.title">Forgot password</Trans>
         </Title>
 
         <form onSubmit={form.onSubmit(onSubmit)}>
@@ -45,7 +45,7 @@ export function ForgotPasswordForm() {
             <TextInput
               id="email"
               type="email"
-              label="Email"
+              label={t({id: "forgot.password.form.label", message: "Email"})}
               placeholder="email@example.com"
               variant="filled"
               {...form.getInputProps("email")}
@@ -54,7 +54,7 @@ export function ForgotPasswordForm() {
 
           {isTokenSent && (
             <Text>
-              <Trans>
+              <Trans id="forgot.password.form.sent">
                 A password reset link has been sent to your email. Please check
                 your inbox.
               </Trans>
@@ -63,7 +63,7 @@ export function ForgotPasswordForm() {
 
           {!isTokenSent && (
             <Button type="submit" fullWidth mt="xl" loading={isLoading}>
-              <Trans>Send reset link</Trans>
+              <Trans id="forgot.password.form.button">Send reset link</Trans>
             </Button>
           )}
         </form>

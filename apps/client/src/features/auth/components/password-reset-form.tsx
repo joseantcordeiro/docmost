@@ -12,12 +12,12 @@ import {
 } from "@mantine/core";
 import classes from "./auth.module.css";
 import { useRedirectIfAuthenticated } from "@/features/auth/hooks/use-redirect-if-authenticated.ts";
-import { Trans } from "@lingui/macro";
+import {t, Trans} from "@lingui/macro";
 
 const formSchema = z.object({
   newPassword: z
     .string()
-    .min(8, { message: "Password must contain at least 8 characters" }),
+    .min(8, { message: t({id: "password.reset.form.password.invalid", message: "Password must contain at least 8 characters"}) }),
 });
 
 interface PasswordResetFormProps {
@@ -46,20 +46,20 @@ export function PasswordResetForm({ resetToken }: PasswordResetFormProps) {
     <Container size={420} my={40} className={classes.container}>
       <Box p="xl" mt={200}>
         <Title order={2} ta="center" fw={500} mb="md">
-          <Trans>Password reset</Trans>
+          <Trans id="password.reset.form.title">Password reset</Trans>
         </Title>
 
         <form onSubmit={form.onSubmit(onSubmit)}>
           <PasswordInput
-            label="New password"
-            placeholder="Your new password"
+            label={t({id: "password.reset.form.label", message: "New password"})}
+            placeholder={t({id: "password.reset.form.placeholder", message: "Your new password"})}
             variant="filled"
             mt="md"
             {...form.getInputProps("newPassword")}
           />
 
           <Button type="submit" fullWidth mt="xl" loading={isLoading}>
-            <Trans>Set password</Trans>
+            <Trans id="password.reset.form.button">Set password</Trans>
           </Button>
         </form>
       </Box>

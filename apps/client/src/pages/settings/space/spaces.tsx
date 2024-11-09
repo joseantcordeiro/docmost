@@ -5,7 +5,7 @@ import {Group} from "@mantine/core";
 import CreateSpaceModal from "@/features/space/components/create-space-modal.tsx";
 import {getAppName} from "@/lib/config.ts";
 import {Helmet} from "react-helmet-async";
-import { Trans } from "@lingui/macro";
+import { t } from "@lingui/macro";
 
 export default function Spaces() {
     const {isAdmin} = useUserRole();
@@ -13,9 +13,9 @@ export default function Spaces() {
     return (
         <>
             <Helmet>
-                <title><Trans>Spaces - {getAppName()}</Trans></title>
+                <title>{t({id: "spaces.title", message: "Spaces"})} - {getAppName()}</title>
             </Helmet>
-            <SettingsTitle title="Spaces"/>
+            <SettingsTitle title={t({id: "spaces.spaces", message: "Spaces"})}/>
 
             <Group my="md" justify="flex-end">
                 {isAdmin && <CreateSpaceModal/>}

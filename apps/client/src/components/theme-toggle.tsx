@@ -6,9 +6,9 @@ export function ThemeToggle() {
 
     return (
       <Group justify="center" mt="xl">
-          <Button onClick={() => setColorScheme('light')}><Trans>Light</Trans></Button>
-          <Button onClick={() => setColorScheme('dark')}><Trans>Dark</Trans></Button>
-          <Button onClick={() => setColorScheme('auto')}><Trans>Auto</Trans></Button>
+          <Button onClick={() => setColorScheme('light')}><Trans id="theme.toggle.light">Light</Trans></Button>
+          <Button onClick={() => setColorScheme('dark')}><Trans id="theme.toggle.dark">Dark</Trans></Button>
+          <Button onClick={() => setColorScheme('auto')}><Trans id="theme.toggle.auto">Auto</Trans></Button>
       </Group>
     );
 }

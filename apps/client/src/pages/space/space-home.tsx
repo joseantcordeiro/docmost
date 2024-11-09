@@ -4,6 +4,7 @@ import {useParams} from "react-router-dom";
 import {useGetSpaceBySlugQuery} from "@/features/space/queries/space-query.ts";
 import {getAppName} from "@/lib/config.ts";
 import {Helmet} from "react-helmet-async";
+import { t } from "@lingui/macro";
 
 export default function SpaceHome() {
     const {spaceSlug} = useParams();
@@ -12,7 +13,7 @@ export default function SpaceHome() {
     return (
         <>
             <Helmet>
-                <title>{space?.name || 'Overview'} - {getAppName()}</title>
+                <title>{space?.name || t({id: "space.home.overview", message: "Overview"})} - {getAppName()}</title>
             </Helmet>
             <Container size={"800"} pt="xl">
                 {space && <SpaceHomeTabs/>}

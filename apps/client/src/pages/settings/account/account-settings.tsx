@@ -6,15 +6,15 @@ import AccountAvatar from "@/features/user/components/account-avatar";
 import SettingsTitle from "@/components/settings/settings-title.tsx";
 import {getAppName} from "@/lib/config.ts";
 import {Helmet} from "react-helmet-async";
-import { Trans } from "@lingui/macro";
+import { t } from "@lingui/macro";
 
 export default function AccountSettings() {
   return (
     <>
         <Helmet>
-            <title><Trans>My Profile - {getAppName()}</Trans></title>
+            <title>{t({id: "account.settings.title", message: "My Profile"})} - {getAppName()}</title>
         </Helmet>
-      <SettingsTitle title="My Profile" />
+      <SettingsTitle title={t({id: "account.settings.my_profile", message: "My Profile"})} />
 
       <AccountAvatar />
 
